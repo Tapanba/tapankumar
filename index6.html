@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music torn</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    :root {
+        --purple500: #281154;
+        --purple300: #270082;
+        --purple600: #1b0058;
+        --red600: #d60000;
+        --body: #f9f6ff;
+        --max-width: 1200px;
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    html,
+    body {
+        font-weight: 300;
+        line-height: 1.4;
+        scroll-behavior: smooth;
+
+    }
+
+    ul {
+        list-style: none;
+    }
+
+    a {
+        text-decoration: none;
+        color: #fff;
+    }
+
+    .contaner {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    header {
+        background-color: var(--purple300);
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: #fff;
+        padding: 0 40px;
+    }
+
+    nav ul {
+        display: flex;
+        gap: 40px;
+        font-size: 18px;
+        font-family: Arial, Helvetica, sans-serif;
+
+    }
+
+    nav ul li {
+        border-bottom: 2px solid transparent;
+        transition: 0.8s;
+
+    }
+
+    nav ul li:hover {
+        border-bottom: 2px solid wheat;
+        transition: 0.8s;
+
+    }
+
+    .logo {
+        font-size: 30px;
+    }
+
+
+
+    .hero-section {
+        background-image: url(/index.html/hero_image.png);
+        height: 100vh;
+
+        background-size: cover;
+        background-position: center;
+        display: grid;
+        color: #fff;
+        place-items: center;
+        text-align: center;
+    }
+
+    .hero-section .contaner {
+        display: flex;
+        flex-direction: column;
+        gap: 35px;
+    }
+
+    .hero-section h1 {
+        font-size: 96px;
+    }
+
+    .hero-section h3 {
+        font-size: 32px;
+    }
+
+    .music-section {
+        padding-top: 50px;
+        background-color: var(--purple500);
+    }
+
+    .music-section .container {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+
+
+
+    }
+
+    .music-section .container h2 {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    button {
+        padding: 10px 15px;
+        border: none;
+        transition: 0.2s ease-in-out;
+    }
+
+    button:hover {
+        opacity: 0.6;
+        transition: 0.2s ease-in-out;
+
+
+    }
+
+    .ipad-iphone {
+        margin-top: -400px;
+        position: relative;
+        top: 400px;
+    }
+
+    .primary-btn {
+        background-color: var(--red600);
+        color: #f9f6ff;
+
+    }
+
+    .secondary-btn {
+        background-color: var(--purple300);
+        color: #fff;
+    }
+
+    .about-music {
+        padding-top: 500px;
+        display: grid;
+        place-items: center;
+        gap: 59PX;
+    }
+
+    .about-music h3,
+    h4 {
+        font-weight: 900;
+    }
+
+    .video-section {
+        background-image: url(/index.html/video.png);
+        min-height: 800px;
+        display: grid;
+        place-items: center;
+        text-align: center;
+        color: wheat;
+    }
+
+    .video-section .container {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        margin-top: -200px;
+    }
+
+    .gift-section {
+        display: flex;
+        justify-content: center;
+        margin: 100px 0;
+        gap: 60px;
+
+    }
+
+    .gift-contant {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .gift-contant h3 {
+        font-weight: 800;
+        font-family: Arial, Helvetica, sans-serif;
+
+    }
+
+    .footer-uper {
+        background-color: var(--purple600);
+        padding: 20px;
+    }
+
+    .footer-uper .container {
+        display: flex;
+        color: wheat;
+        justify-content: space-evenly;
+    }
+
+    .footer-uper h4 {
+        padding-bottom: 10px;
+        border-bottom: 2px solid white;
+        margin-bottom: 10px;
+
+
+    }
+
+    .footer-lovear {
+        background-color: var(--purple300);
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        color: wheat;
+
+    }
+
+    .footer-links h4 {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .gift-card img {
+        border: 2px solid wheat;
+        box-shadow: 0 0 6px 1px;
+        border-radius: 5px;
+        height: 90%;
+        transition: 0.8s;
+    }
+
+    .gift-card img:hover {
+        height: 93%;
+
+    }
+</style>
+
+
+</body>
+
+</html>
+<header>
+    <nav class="contaner">
+        <div class="logo">myTunes</div>
+
+
+
+        <ul>
+            <a href="#hero">
+                <li>Overview</li>
+            </a>
+            <a href="#music">
+                <li>Music</li>
+            </a>
+            <a href="#video">
+                <li>Video</li>
+            </a>
+            <a href="#gift">
+                <li>Giftcard</li>
+            </a>
+        </ul>
+    </nav>
+</header>
+
+
+
+<main>
+    <section class="hero-section" id="hero">
+        <div class="contaner">
+            <h1>my Tunes</h1>
+            <h3>Your music,movies, and shows take center stage..</h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam ex soluta sapiente deserunt tempora
+                veniam nulla <br>cupiditate ea voluptatibus beatae laboriosam temporibus dicta natus error doloremque
+                eum, unde iure nihil.</p>
+        </div>
+
+
+    </section>
+
+
+    <section class="music-section" id="music">
+        <div class="container">
+            <h2><span><i></i></span>
+                Music
+            </h2>
+            <h4>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, eveniet nesciunt possimus consequuntur
+                animi quam.<br> Consectetur vel asperiores distinctio officia libero amet! Laudantium, facilis cum?
+                Placeat perspiciatis suscipit facere<br> deserunt quibusdam aliquid iste. Deleniti quis incidunt tenetur
+                nostrum veniam maiores nisi, modi labore mollitia odit,<br> molestias ipsa dolorem, fugiat laborum!
+            </h4>
+            <button class="primary-btn">
+                Start Your Trail Now
+            </button>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat consequatur obcaecati nam voluptatum!
+            </p>
+            <div class="ipad-iphone">
+                <img src="/index.html/ipad-iphone.png" alt="">
+            </div>
+        </div>
+    </section>
+
+    <section class="about-music container">
+        <h3>The movie and TV collection you always wished for.Granted..</h3>
+        <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam repellat architecto nesciunt, officiis
+            <br>ipsum iusto a minus vel reiciendis at sunt doloribus quidem doloremque eveniet impedit tempore est tv
+            <br>cumque quo atque excepturi consequatur assumenda, rem ducimus. Error porro corrupti labore et got,<br>
+            vel reprehenderit sapiente nostrum dolores inventore molestias id ut.
+        </h4>
+        <button class="secondary-btn">Read more</button>
+        <div class="mac-img">
+            <img src="/index.html/mac.png" alt="">
+        </div>
+    </section>
+    <section class="video-section" id="video">
+        <div class="container">
+            <h3>A world of entertainment. Avalable wherever you are.</h3>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita fuga officia optio alias ea suscipit
+                sunt consectetur <br>Sapiente nam id magni unde placeat vero possimus tempora quae minus voluptates
+                repellendus repellat totam, facere<br> sequi neque, necessitatibus nihil corrupti laboriosam praesentium
+                delectus ducimus et maxime sed nulla! Nobis laboriosam <br>itaque soluta neque repellendus quasi unde
+                dolore quaerat impedit dignissimos asperiores labore ipsa eum ipsam magnam voluptatum<br> omnis, saepe
+                non vitae voluptatibus adipisci. Laborum, iusto? Error consequuntur dolorum eum necessitatibus quidem.
+            </p>
+        </div>
+    </section>
+
+    <div class="container">
+        <section class="gift-section container" id="gift">
+            <div class="gift-card">
+                <img src="/index.html/gift_card.png" alt="">
+            </div>
+            <div class="gift-contant">
+                <h3>Gift card</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae impedit,<br> voluptatem eos
+                    voluptas ducimus culpa aut amet eum perspiciatis sint sequi er <br> consequatur velit accusantium
+                    reprehenderit expedita nisi, aspernatur her elser <br> Quis sit voluptatem laborum officiis, quae
+                    expedita ipsa deleniti, quos impedit <br> harum voluptas minus. Mollitia ipsa maiores illum veniam
+                    odio dolores?</p>
+                <p>Already have an Orange myTunes Music gift card</p>
+                <hr>
+                <div>
+                    <button class="secondary-btn">Reddem</button>
+                </div>
+            </div>
+        </section>
+
+    </div>
+</main>
+<footer>
+    <section class="footer-uper">
+        <div class="container">
+            <div class="footer-links">
+                <h4>Shop & Learn</h4>
+                <ul>
+                    <li>Music</li>
+                    <li>movies</li>
+                    <li>shows</li>
+                    <li>Appes</li>
+                    <li>Giftcard</li>
+
+                </ul>
+            </div>
+
+            <div class="footer-links">
+                <h4>Orange Store</h4>
+                <ul>
+                    <li>Find a store</li>
+                    <li>Today at Orange</li>
+                    <li>Orange Camp</li>
+                    <li>Financing</li>
+                    <li>Order Status</li>
+            </div>
+            <div class="footer-links">
+                <h4>Education & Business</h4>
+                <ul>
+                    <li>Orange & Education</li>
+                    <li>Shop for Collage</li>
+                    <li>Orange & Business</li>
+                    <li>Shop For Business</li>
+                    <li>Jobs</li>
+
+                </ul>
+            </div>
+
+            <div class="footer-links">
+                <h4>About Orange</h4>
+                <ul>
+                    <li>Newscroom</li>
+                    <li>Orange Leadershp</li>
+                    <li>Investore</li>
+                    <li>Envents</li>
+                    <li>Contact Orange </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section class="footer-lovear">
+        <p>Copyright @ 2023 Tapan kumar...</p>
+    </section>
+</footer>
+
+</body>
+
+</html>
